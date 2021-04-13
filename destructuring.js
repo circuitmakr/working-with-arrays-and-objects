@@ -17,12 +17,18 @@ var carDetails = {
 }
 // Do not edit the code above.
 
+
 /*
   Use object destructuring to save the property values from the object carDetails into new variables. 
 */
 
 //Code Here
+const {color} = carDetails;
+const {make} = carDetails;
+const {model} = carDetails;
+const {year} = carDetails;
 
+console.log(color, make, model, year)
 
 
 ////////// PROBLEM 2 //////////
@@ -35,7 +41,9 @@ var carDetails = {
 
 function greeting( obj ) {
   //Code Here
-  
+  const{title} = obj;
+  const{firstName} = obj;
+  const{lastName} = obj;
   // Do not edit the code below.
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
   // Do not edit the code above.
@@ -55,8 +63,17 @@ function greeting( obj ) {
 
 //Code Here
 
+function totalPopulation(obj)
+{
+const {utah} = obj;
+const {california} = obj;
+const {texas} = obj;
+const {arizona} = obj;
 
+return utah + california + texas + arizona;
+}
 
+totalPopulation();
 ////////// PROBLEM 4 //////////
 
 /*
@@ -68,7 +85,17 @@ function greeting( obj ) {
 */
 
 //Code Here
+function ingredients(obj){
+foodStats =[];
+const {carb} = obj;
+const {fat} = obj;
+const {protein} = obj;
 
+foodStats.push(carb,fat,protein)
+
+return foodStats
+
+}
 
 
 ////////// PROBLEM 5 //////////
@@ -87,7 +114,11 @@ function greeting( obj ) {
 
 //Code Here
 
+function largeNumbers({first, second, third}){
 
+let lowest = Math.min(first, second,third);
+return lowest;
+};
 
 ////////// PROBLEM 6 //////////
 
@@ -98,5 +129,15 @@ function greeting( obj ) {
 */
 
 //Code Here
-
+function numberGroups({a,b,c}){
+  const numbers = [a,b,c];
+  let maximum = Math.max(a.length, b.length,c.length)
+  if(maximum ===a.length){
+    return a
+  }else if(maximum===b.length){
+    return b
+  }else{
+    return c
+  }
+}
 
